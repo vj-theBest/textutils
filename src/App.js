@@ -29,28 +29,29 @@ function App() {
   const toggleMode = ()=> {
     if(mode === 'light'){
       setMode('dark');
-      document.body.style.backgroundColor = 'grey';
+      document.body.style.backgroundColor = '#042743';
       // document.title ="TextUtils-Dark mode"; "this is to set title dynamically"
       showAlert("Dark mode is enabled","success");//here the values for showalert objects msg and type are passed which sets setAlert 
     }
     else{
       setMode('light');
-      document.body.style.backgroundColor = 'white';
       showAlert("Light mode is enabled", "success");
+      document.body.style.backgroundColor = 'white';
     }
   }
+     
   return (
     <>
     <Router>
-    <Navbar title="TextUtils" abouttext="About text" mode = {mode} toggleMode={toggleMode}/>
+    <Navbar title="TextUtils" abouttext="About" mode = {mode} toggleMode={toggleMode}/>
     <Alert1 alert1={alert1}/>
     {/* <Alert alert={alert}/> */}
       <div className="container my-3">
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route exact path="/about">
+            <About  mode = {mode} />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <TextForm showAlert={showAlert} heading="Enter a Text to Analyze Below:-" mode = {mode}/>
           </Route>
         </Switch>

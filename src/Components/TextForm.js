@@ -30,16 +30,16 @@ export default function TextForm(props) {
         <div className="container" style={{color:props.mode==='dark'?'white':'black'}}>
             <h1>{props.heading}</h1>
             <div className="mb-3">
-                <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==='dark'?'grey':'white', color:props.mode==='dark'?'white':'black'}} id="Mybox" rows="8"></textarea>
+                <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==='dark'?'#042743':'white', color:props.mode==='dark'?'white':'black'}} id="Mybox" rows="8"></textarea>
             </div>
-            <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to Uppercase</button>
-            <button className="btn btn-primary mx-1" onClick={handleLowClick}>Convert to Lowercase</button>
-            <button className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={handleLowClick}>Convert to Lowercase</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
         </div>
         <div className="container my-3" style={{color:props.mode==='dark'?'white':'black'}}>
             <h2>Your text have</h2>
-            <p> {text.split(" ").length} words and {text.length} characters</p>
-            <p> {0.008*text.split(" ").length} Minutes Read</p>
+            <p> {text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+            <p> {0.008*text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes Read</p>      
             <h2>Preview</h2>
             <p>{text.length>0?text:"Enter something in the textbox to have a preview"}</p>
         </div>

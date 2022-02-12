@@ -5,9 +5,11 @@ const capitalised =(word)=>{
   }
 function Alert1(props) {
   return (
-        props.alert1 && <div className={`alert alert-${props.alert1.type} alert-dismissible fade show`} role="alert">
+    <div style={{height:'50px'}}>
+       { props.alert1 && <div className={`alert alert-${props.alert1.type} alert-dismissible fade show`} role="alert">
            <strong>{capitalised(props.alert1.type)} </strong>: {props.alert1.msg}
-         </div>
+         </div>}
+      </div>
   
   );
 }
