@@ -1,6 +1,6 @@
 import React from "react";
-import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
-import { useState } from "react/cjs/react.development";
+//import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
+//import { useState } from "react/cjs/react.development";
 
 export default function About(props) {
     // const [myStyle,setMyStyle]= useState(
