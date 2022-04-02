@@ -1,19 +1,18 @@
-# Getting Started with Create React App
+# My First React.js App😊
 
 TextUtils is a Text utility webapp.
 By Using this webapp:-
   ✨Check the number of words and characters of a text paragraph.
   ✨Calculate Average time used to read the TEXT input.
-  ✨Convert given text into all UPPERCASE
-  ✨✨✨✨
+  ✨Convert given text into all UPPERCASE.
+  ✨Convert given text into all lowercase.
+  ✨Trim off all the EXTRA Spaces.
 
 
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-
+This webapp is created by Using:
+    React.js
+    BootStrap v.5
+    React Routers
+    HTML5/CSS3/JAVASCRIPT
+    IDE:- Visual Studio Code
+    
